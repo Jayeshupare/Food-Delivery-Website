@@ -1,0 +1,122 @@
+.list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.list p:first-child {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff944d;
+}
+
+.list-table {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.list-table-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+.list-table-format:hover {
+    background-color: #f9f9f9;
+}
+
+.list-table-format.title {
+    background-color: #ff944d;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+}
+
+.list-table-format.title:hover {
+    background-color: #ff944d;
+}
+
+.list-table-format img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.list-table-format p:last-child {
+    color: #ff944d;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.list-table-format p:last-child:hover {
+    color: #ff944d;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .list-table-format {
+        grid-template-columns: 0.7fr 2fr 1fr 0.5fr;
+    }
+    .list-table-format p:nth-child(4) {
+        display: none;
+    }
+    .list-table-format.title p:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .list {
+        padding: 15px;
+    }
+    
+    .list-table-format {
+        grid-template-columns: 1fr 2fr 0.5fr;
+        gap: 15px;
+        padding: 12px 15px;
+    }
+    
+    .list-table-format p:nth-child(3),
+    .list-table-format p:nth-child(4) {
+        display: none;
+    }
+    
+    .list-table-format.title {
+        display: none;
+    }
+    
+    .list-table-format img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .list-table-format {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .list-table-format img {
+        justify-self: center;
+    }
+}

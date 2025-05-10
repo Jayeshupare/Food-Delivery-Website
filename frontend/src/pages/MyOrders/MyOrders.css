@@ -1,0 +1,120 @@
+.my-orders {
+    margin: 40px 16px;
+    max-width: 1200px;
+    margin-inline: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .my-orders h2 {
+    font-size: 26px;
+    color: #444;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .my-orders-order {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease;
+  }
+  
+  .my-orders-order:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .my-orders-order img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+  }
+  
+  .my-orders-order p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    flex: 1 1 150px;
+  }
+  
+  .my-orders-order p span {
+    color: #4caf50;
+    font-size: 14px;
+  }
+  
+  .my-orders-order p b {
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .my-orders-order button {
+    background-color: #ff944d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .my-orders-order button:hover {
+    background-color: #ff744d;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .my-orders-order {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+    }
+  
+    .my-orders-order img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .my-orders-order p {
+      font-size: 13px;
+      flex: unset;
+    }
+  
+    .my-orders-order button {
+      align-self: stretch;
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .my-orders h2 {
+      font-size: 22px;
+    }
+  
+    .my-orders-order {
+      padding: 14px;
+    }
+  
+    .my-orders-order p {
+      font-size: 12px;
+    }
+  
+    .my-orders-order button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+  
